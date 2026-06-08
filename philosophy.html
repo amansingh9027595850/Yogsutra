@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deepen your knowledge of yoga philosophy and Yoga Science at Yogsutra Yogshala. Explore the 8 Limbs of Yoga (Ashtanga) and how they guide conscious modern living.">
+  <title>Our Philosophy | Yogsutra Yogshala</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Custom accordions for limbs */
+    .limb-accordion {
+      max-width: 800px;
+      margin: var(--spacing-md) auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .limb-header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+      transition: all var(--transition-fast);
+      border-radius: var(--radius-sm);
+    }
+    .limb-header:hover, .limb-header.active {
+      background: var(--clr-primary);
+      color: var(--clr-white);
+    }
+    .limb-header:hover h3, .limb-header.active h3 {
+      color: var(--clr-white);
+    }
+    .limb-header:hover span, .limb-header.active span {
+      color: var(--clr-accent-light);
+    }
+    .limb-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+      padding: 0 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    }
+    .limb-body.open {
+      padding: 1.5rem;
+      max-height: 500px; /* arbitrary height to slide down */
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-top: none;
+    }
+    .limb-num {
+      font-family: var(--ff-headings);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--clr-accent);
+      margin-right: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page transition slide overlay -->
+  <div class="page-transition-overlay"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Yogsutra Yogshala Logo" class="logo-img">
+      </a>
+      <nav class="nav-menu-wrapper">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 150px; background: linear-gradient(to bottom, rgba(215, 223, 219, 0.4), rgba(247, 245, 240, 0.1));">
+    <div class="container text-center">
+      <span style="text-transform: uppercase; letter-spacing: 3px; color: var(--clr-accent-dark); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; display: block;">Ancient Roots</span>
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">The Philosophy of Union</h1>
+      <p style="max-width: 600px; margin: 1rem auto 0; font-size: 1.15rem;">Yoga is more than alignment of bone and muscle. It is a comprehensive framework for living consciously and finding union within.</p>
+    </div>
+  </section>
+
+  <!-- Yoga Meaning Section -->
+  <section class="section reveal">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <h2 class="text-center" style="margin-bottom: var(--spacing-sm);">What is Yoga?</h2>
+      <p style="margin-bottom: var(--spacing-sm); font-size: 1.1rem; text-align: center; font-style: italic; color: var(--clr-primary);">Derived from the Sanskrit word "Yuj," meaning to yoke, unite, or bind.</p>
+      <p style="margin-bottom: var(--spacing-sm); line-height: 1.7;">Historically, the practice of yoga was formulated to quiet the analytical chatter of the conscious mind, returning the individual to their essential, calm state. In the classic yoga treatise, the <i>Yoga Sutras of Patanjali</i>, yoga is defined as: <strong>"Yogash chitta vritti nirodhah"</strong> — the cessation of the fluctuations of the mind.</p>
+      <p style="margin-bottom: var(--spacing-sm); line-height: 1.7;">To achieve this quietness, Patanjali organized a comprehensive eight-fold path. This guide consists of eight progressive steps, starting with ethical social behaviors and moving inward to deep meditation.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Limbs Accordion -->
+  <section class="section reveal" style="background: radial-gradient(circle at 10% 20%, rgba(215, 223, 219, 0.2) 0%, rgba(247, 245, 240, 0.1) 90%);">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto var(--spacing-md);">
+        <span style="text-transform: uppercase; letter-spacing: 2px; color: var(--clr-accent-dark); font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.5rem;">Ashtanga (Eight Limbs)</span>
+        <h2>The Eight-Fold Path</h2>
+        <p>Click on any limb below to explore its traditional definition and how to apply it in your modern life.</p>
+      </div>
+
+      <div class="limb-accordion">
+        
+        <!-- Limb 1 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card active" onclick="toggleLimb(this, 'limb-1-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">01</span>
+              <h3>Yamas</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Ethical Standards &bull; Expand</span>
+          </button>
+          <div id="limb-1-body" class="limb-body open">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">The Yamas: Social Ethics</h4>
+            <p style="margin-bottom: 0.5rem;">The Yamas deal with one's ethical standards and sense of integrity, focusing on how we behave toward others. There are five Yamas:</p>
+            <ul style="list-style-type: circle; margin-left: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
+              <li><strong>Ahimsa:</strong> Non-violence or non-harming (practicing kindness to all beings, including yourself).</li>
+              <li><strong>Satya:</strong> Truthfulness (speaking and living truth with compassion).</li>
+              <li><strong>Asteya:</strong> Non-stealing (not taking what is not freely offered).</li>
+              <li><strong>Brahmacharya:</strong> Right use of energy (moderation and conserving energy for spiritual growth).</li>
+              <li><strong>Aparigraha:</strong> Non-greed or non-attachment (living simply and letting go of hoarding habits).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Limb 2 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card" onclick="toggleLimb(this, 'limb-2-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">02</span>
+              <h3>Niyamas</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Self-Discipline &bull; Expand</span>
+          </button>
+          <div id="limb-2-body" class="limb-body">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">The Niyamas: Personal Observances</h4>
+            <p style="margin-bottom: 0.5rem;">The Niyamas have to do with self-discipline and inner observances, providing a personal code of conduct. The five Niyamas are:</p>
+            <ul style="list-style-type: circle; margin-left: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
+              <li><strong>Saucha:</strong> Purity (keeping the body, space, and mind clean).</li>
+              <li><strong>Santosha:</strong> Contentment (accepting and finding gratitude in the present moment).</li>
+              <li><strong>Tapas:</strong> Discipline or heat (burning away blockages through regular practice).</li>
+              <li><strong>Svadhyaya:</strong> Self-study (studying sacred texts and observing your own behaviors).</li>
+              <li><strong>Ishvara Pranidhana:</strong> Devotion (surrendering to a higher power or the flow of life).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Limb 3 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card" onclick="toggleLimb(this, 'limb-3-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">03</span>
+              <h3>Asana</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Physical Postures &bull; Expand</span>
+          </button>
+          <div id="limb-3-body" class="limb-body">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">Asana: The Physical Temple</h4>
+            <p style="line-height: 1.7;">Asanas are the physical postures practiced in modern yoga classes. Traditionally, Patanjali designed physical postures to build energy, restore cellular health, and prepare the physical body to sit in silent meditation for hours without distraction.</p>
+          </div>
+        </div>
+
+        <!-- Limb 4 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card" onclick="toggleLimb(this, 'limb-4-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">04</span>
+              <h3>Pranayama</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Breath Control &bull; Expand</span>
+          </button>
+          <div id="limb-4-body" class="limb-body">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">Pranayama: Regulating the Life Force</h4>
+            <p style="line-height: 1.7;">Pranayama consists of breathing techniques designed to gain mastery over the respiratory process while recognizing the connection between the breath, the mind, and the nervous system. Regulating your breath lets you directly influence your stress levels.</p>
+          </div>
+        </div>
+
+        <!-- Limb 5 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card" onclick="toggleLimb(this, 'limb-5-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">05</span>
+              <h3>Pratyahara</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Sensory Withdrawal &bull; Expand</span>
+          </button>
+          <div id="limb-5-body" class="limb-body">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">Pratyahara: Turning Inward</h4>
+            <p style="line-height: 1.7;">Pratyahara is the practice of drawing our attention away from external distractions, sounds, and physical sensations. By turning the sensory receptors inward, we gain distance from cravings and emotional reactions.</p>
+          </div>
+        </div>
+
+        <!-- Limb 6-8 -->
+        <div style="border-radius: var(--radius-sm); overflow: hidden;">
+          <button class="limb-header glass-card" onclick="toggleLimb(this, 'limb-6-body')">
+            <div style="display: flex; align-items: center;">
+              <span class="limb-num">06-08</span>
+              <h3>Dharana, Dhyana, Samadhi</h3>
+            </div>
+            <span style="font-size: 0.9rem; font-weight: 500;">Concentration &amp; Beyond &bull; Expand</span>
+          </button>
+          <div id="limb-6-body" class="limb-body">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--ff-body); font-weight: 600;">The Inner Limbs of Meditation</h4>
+            <p style="margin-bottom: 0.5rem;">The final three limbs represent the inward journey toward self-realization:</p>
+            <ul style="list-style-type: circle; margin-left: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
+              <li><strong>Dharana (Concentration):</strong> Fixing the mind on a single focus point (like the breath, a mantra, or a candle flame).</li>
+              <li><strong>Dhyana (Meditation):</strong> The uninterrupted flow of concentration where the mind merges into the object of focus.</li>
+              <li><strong>Samadhi (Liberation):</strong> A state of pure ecstatic union, transcending the ego, and merging with the universal consciousness.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Yogsutra Yogshala Logo" class="footer-logo-img">
+        </div>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-top: 10px;">
+          Nurturing discipline, balance, and bliss in daily life. Walk the path of yoga science with us.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="team.html" class="footer-link">Our Guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Vinyasa Flow</a></li>
+          <li><a href="services.html" class="footer-link">Hatha Yoga</a></li>
+          <li><a href="services.html" class="footer-link">Meditation Sessions</a></li>
+          <li><a href="services.html" class="footer-link">Sound Therapy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Email: hello@yogsutrayogshala.com</p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Phone: +1 (555) 123-4567</p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem;">Location: 108 Shanti Boulevard, Sanctuary Valley</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Yogsutra Yogshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleLimb(headerEl, bodyId) {
+      const bodyEl = document.getElementById(bodyId);
+      
+      // Close all other bodies
+      document.querySelectorAll('.limb-body').forEach(el => {
+        if (el.id !== bodyId) {
+          el.classList.remove('open');
+        }
+      });
+      document.querySelectorAll('.limb-header').forEach(el => {
+        if (el !== headerEl) {
+          el.classList.remove('active');
+        }
+      });
+
+      // Toggle this body
+      bodyEl.classList.toggle('open');
+      headerEl.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <!-- Lotus Icon -->
+  <g fill="none" stroke="#f37021" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Yogi Head -->
+    <circle cx="300" cy="110" r="14" fill="#f37021" stroke="none" />
+    
+    <!-- Torso / Arms -->
+    <path d="M 278,145 C 266,165 266,195 282,215 C 285,220 288,225 292,232" />
+    <path d="M 322,145 C 334,165 334,195 318,215 C 315,220 312,225 308,232" />
+    
+    <!-- Crossed Legs (Base) -->
+    <path d="M 230,265 C 250,290 350,290 370,265 C 390,245 350,245 300,245 C 250,245 210,245 230,265 Z" fill="none" stroke-width="12" />
+
+    <!-- Center Petal Outline (background frame) -->
+    <path d="M 300,80 C 275,110 255,140 250,175 C 250,205 270,230 300,240 C 330,230 350,205 350,175 C 345,140 325,110 300,80 Z" fill="none" stroke-width="9" />
+
+    <!-- Upper Left Petal -->
+    <path d="M 250,165 C 225,145 185,165 165,200 C 155,220 175,235 210,240 C 235,243 250,230 255,220" />
+    
+    <!-- Upper Right Petal -->
+    <path d="M 350,165 C 375,145 415,165 435,200 C 445,220 425,235 390,240 C 365,243 350,230 345,220" />
+    
+    <!-- Lower Left Petal -->
+    <path d="M 220,235 C 175,215 135,235 135,260 C 135,285 185,285 230,270" />
+    
+    <!-- Lower Right Petal -->
+    <path d="M 380,235 C 425,215 465,235 465,260 C 465,285 415,285 370,270" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="300" y="360" text-anchor="middle" font-family="'Playfair Display', 'Georgia', serif" font-size="46" font-weight="700" fill="#f37021" letter-spacing="1">Yogsutra Yogshala</text>
+  <text x="300" y="405" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-size="16" font-weight="600" fill="#f37021" letter-spacing="8">DISCIPLINE . BALANCE . BLISS</text>
+</svg>
