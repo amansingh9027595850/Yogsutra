@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Immerse yourself in the visual journey of Yogsutra Yogshala. Browse images of our serene studio, alignment practices, meditation sessions, and sound therapies.">
+  <title>Gallery | Yogsutra Yogshala</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Page transition slide overlay -->
+  <div class="page-transition-overlay"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.jpg" alt="Yogsutra Yogshala Logo" class="logo-img">
+      </a>
+      <nav class="nav-menu-wrapper">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 150px; background: linear-gradient(to bottom, rgba(215, 223, 219, 0.4), rgba(247, 245, 240, 0.1));">
+    <div class="container text-center">
+      <span style="text-transform: uppercase; letter-spacing: 3px; color: var(--clr-accent-dark); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; display: block;">Visual Journey</span>
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">The Gallery of Practice</h1>
+      <p style="max-width: 600px; margin: 1rem auto 0; font-size: 1.15rem;">Moments of stillness, physical alignment, and tranquil energy captured within our sanctuary.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid Section -->
+  <section class="section reveal" style="padding-top: 0;">
+    <div class="container">
+      
+      <!-- Interactive Category Filters -->
+      <div class="gallery-filter-bar">
+        <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+        <button class="gallery-filter-btn" data-filter="asana">Asanas</button>
+        <button class="gallery-filter-btn" data-filter="studio">Our Studio</button>
+        <button class="gallery-filter-btn" data-filter="wellness">Wellness &amp; Med</button>
+      </div>
+
+      <!-- Photos Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        
+        <!-- Image 1 -->
+        <div class="gallery-item-card show" data-category="studio">
+          <div class="gallery-img-container">
+            <img src="images/real_group_plank.jpg" alt="Group yoga class practicing planks in the studio" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Studio</span>
+              <h4 class="gallery-item-title">Group plank practice</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-item-card show" data-category="wellness">
+          <div class="gallery-img-container">
+            <img src="images/real_meditation_soul.jpg" alt="Lotus posture meditation in front of a yoga heals the soul wall graphic" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Wellness</span>
+              <h4 class="gallery-item-title">Inner peace</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_camel_studio.jpg" alt="Camel pose Ustrasana practice inside the studio" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">Camel pose Ustrasana</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_splits_mountain.jpg" alt="Hanumanasana splits pose with mountain backdrop" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">Hanumanasana splits</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="gallery-item-card show" data-category="wellness">
+          <div class="gallery-img-container">
+            <img src="images/real_camel_mountain.jpg" alt="Camel pose Ustrasana practice with mountain backdrop" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Wellness</span>
+              <h4 class="gallery-item-title">Camel pose in nature</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_warrior_stairs.jpg" alt="Warrior pose crescent lunge on red stone stairs" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">Crescent Lunge</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_pigeon_studio.jpg" alt="One-Legged King Pigeon pose Eka Pada Rajakapotasana practice inside the studio" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">King Pigeon pose</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_standing_stretch.jpg" alt="Standing balance leg stretch pose with mountain backdrop" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">Standing balance stretch</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="gallery-item-card show" data-category="asana">
+          <div class="gallery-img-container">
+            <img src="images/real_side_stretch_studio.jpg" alt="Seated side stretch pose alignment practice inside the studio" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Asana</span>
+              <h4 class="gallery-item-title">Seated side stretch</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="gallery-item-card show" data-category="studio">
+          <div class="gallery-img-container">
+            <img src="images/real_group_lunge.jpg" alt="Founder Sameeksha Pharasi leading group class lunge practice in the studio" class="gallery-item-img">
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-tag">Studio</span>
+              <h4 class="gallery-item-title">Sameeksha Pharasi (Founder)</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Image Lightbox">
+    <button class="lightbox-btn lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous Image">&#10094;</button>
+    <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next Image">&#10095;</button>
+    
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption-panel">
+        <span class="lightbox-tag" id="lightbox-tag">Tag</span>
+        <p class="lightbox-title" id="lightbox-title">Title</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Yogsutra Yogshala Logo" class="footer-logo-img">
+        </div>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-top: 10px;">
+          Nurturing discipline, balance, and bliss in daily life. Walk the path of yoga science with us.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="team.html" class="footer-link">Our Guides</a></li>
+          <li><a href="sameeksha-pharasi.html" class="footer-link">Sameeksha Pharasi</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offerings</h4>
+        <ul class="footer-links">
+          <li><a href="services.html" class="footer-link">Vinyasa Flow</a></li>
+          <li><a href="services.html" class="footer-link">Hatha Yoga</a></li>
+          <li><a href="services.html" class="footer-link">Meditation Sessions</a></li>
+          <li><a href="services.html" class="footer-link">Sound Therapy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Email: <a href="mailto:yogsutrayogshala@gmail.com" style="color: inherit; text-decoration: none;">yogsutrayogshala@gmail.com</a></p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Phone: +91 80774 57050</p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem;">Location: 108 Shanti Boulevard, Sanctuary Valley</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Yogsutra Yogshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

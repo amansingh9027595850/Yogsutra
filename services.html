@@ -22,6 +22,7 @@
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
@@ -112,24 +113,24 @@
   <section class="section reveal" id="contact">
     <div class="container">
       <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); align-items: center;">
-        <div style="max-width: 600px; margin: 0 auto; width: 100%;">
+        <div style="max-width: 600px; margin: 0 auto; width: 100%;" id="services-form-container">
           <div class="text-center" style="margin-bottom: var(--spacing-sm);">
             <h2>Have a Question?</h2>
             <p>Fill out the form below and our studio director will reach out within 24 hours.</p>
           </div>
           
-          <form class="interactive-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Yogsutra Yogshala. We will email you back shortly.'); this.reset();">
+          <form class="interactive-form" onsubmit="handleServicesSubmit(event)">
             <div class="form-group">
-              <label for="contact-name" class="form-label">Full Name</label>
-              <input type="text" id="contact-name" class="form-control" placeholder="Jane Doe" required>
+              <label for="services-name" class="form-label">Full Name</label>
+              <input type="text" id="services-name" class="form-control" placeholder="Jane Doe" required>
             </div>
             <div class="form-group">
-              <label for="contact-email" class="form-label">Email Address</label>
-              <input type="email" id="contact-email" class="form-control" placeholder="jane@example.com" required>
+              <label for="services-email" class="form-label">Email Address</label>
+              <input type="email" id="services-email" class="form-control" placeholder="jane@example.com" required>
             </div>
             <div class="form-group">
-              <label for="contact-msg" class="form-label">Message</label>
-              <textarea id="contact-msg" class="form-control" rows="4" placeholder="How can we help support your journey?" required style="font-family: inherit; resize: vertical;"></textarea>
+              <label for="services-msg" class="form-label">Message</label>
+              <textarea id="services-msg" class="form-control" rows="4" placeholder="How can we help support your journey?" required style="font-family: inherit; resize: vertical;"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="justify-self: center;">Send Message</button>
           </form>
@@ -155,6 +156,8 @@
           <li><a href="index.html" class="footer-link">Home</a></li>
           <li><a href="about.html" class="footer-link">About Us</a></li>
           <li><a href="team.html" class="footer-link">Our Guides</a></li>
+          <li><a href="sameeksha-pharasi.html" class="footer-link">Sameeksha Pharasi</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -168,8 +171,8 @@
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Email: hello@yogsutrayogshala.com</p>
-        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Phone: +1 (555) 123-4567</p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Email: <a href="mailto:yogsutrayogshala@gmail.com" style="color: inherit; text-decoration: none;">yogsutrayogshala@gmail.com</a></p>
+        <p style="color: var(--clr-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Phone: +91 80774 57050</p>
         <p style="color: var(--clr-secondary); font-size: 0.95rem;">Location: 108 Shanti Boulevard, Sanctuary Valley</p>
       </div>
     </div>
@@ -179,6 +182,80 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    function handleServicesSubmit(event) {
+      event.preventDefault();
+      
+      const container = document.getElementById('services-form-container');
+      const name = document.getElementById('services-name').value;
+      const email = document.getElementById('services-email').value;
+      const message = document.getElementById('services-msg').value;
+
+      // Loading state
+      container.innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 350px;">
+          <div style="width: 40px; height: 40px; border: 4px solid var(--clr-secondary); border-top-color: var(--clr-primary); border-radius: 50%; animation: spin 1s infinite linear;"></div>
+          <p style="margin-top: 1rem; color: var(--clr-primary);">Sending your message...</p>
+        </div>
+      `;
+
+      // Submit form data to FormSubmit API
+      fetch("https://formsubmit.co/ajax/yogsutrayogshala@gmail.com", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Message: message,
+          _subject: `New Yogsutra Services Inquiry from ${name}`
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+        // Success state
+        container.innerHTML = `
+          <div style="text-align: center; padding: 2rem 1rem; opacity: 0; transform: translateY(10px); animation: fadeInUp 0.5s ease forwards; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="font-size: 4rem; color: #55a67b; margin-bottom: 1rem;">✓</div>
+            <h3 style="color: #337a54; margin-bottom: 0.5rem;">Thank you, ${name}!</h3>
+            <p style="font-size: 1.05rem; color: var(--clr-text-main); margin-bottom: 1.5rem;">
+              Your message has been successfully sent to Sameeksha Pharasi.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--clr-text-muted); max-width: 320px;">We appreciate you connecting with us and we will reach out shortly.</p>
+          </div>
+        `;
+      })
+      .catch(error => {
+        console.error("Submission error:", error);
+        // Error state
+        container.innerHTML = `
+          <div style="text-align: center; padding: 2rem 1rem; min-height: 350px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div style="font-size: 4rem; color: var(--clr-accent); margin-bottom: 1rem;">⚠️</div>
+            <h3 style="color: var(--clr-accent-dark); margin-bottom: 0.5rem;">Oops, submission failed</h3>
+            <p style="font-size: 1.05rem; color: var(--clr-text-main); margin-bottom: 1.5rem;">
+              Something went wrong while sending your message.
+            </p>
+            <p style="font-size: 0.9rem; color: var(--clr-text-muted); max-width: 320px;">
+              Please try again or send a direct email to <a href="mailto:yogsutrayogshala@gmail.com" style="color: var(--clr-accent-dark); text-decoration: underline;">yogsutrayogshala@gmail.com</a>.
+            </p>
+            <button onclick="window.location.reload()" class="btn btn-outline" style="margin-top: 1rem;">Reload Form</button>
+          </div>
+        `;
+      });
+    }
+  </script>
+  <style>
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 
 </body>
 </html>
