@@ -954,6 +954,16 @@ ul {
   color: var(--clr-secondary);
 }
 
+.footer-bottom a {
+  color: var(--clr-accent-light);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--clr-white);
+}
+
 /* --- Animations Keyframes --- */
 @keyframes fadeInUp {
   from {
