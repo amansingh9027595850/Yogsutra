@@ -56,6 +56,10 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -66,7 +70,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -724,6 +727,7 @@ ul {
 }
 
 .form-control {
+  width: 100%;
   padding: 0.8rem 1rem;
   border: 1px solid var(--clr-secondary);
   border-radius: var(--radius-sm);
@@ -735,6 +739,18 @@ ul {
 
 .form-control:focus {
   border-color: var(--clr-primary);
+}
+
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .form-grid-2col {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* --- Calculator Tool --- */
