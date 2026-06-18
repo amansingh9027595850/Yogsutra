@@ -315,4 +315,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Video Section Play/Pause Logic ---
+  const introVideo = document.getElementById('intro-video');
+  const videoOverlay = document.getElementById('video-overlay');
+
+  if (introVideo && videoOverlay) {
+    videoOverlay.addEventListener('click', () => {
+      introVideo.play();
+      videoOverlay.classList.add('hide');
+      introVideo.setAttribute('controls', 'true');
+    });
+
+    introVideo.addEventListener('pause', () => {
+      videoOverlay.classList.remove('hide');
+      introVideo.removeAttribute('controls');
+    });
+
+    introVideo.addEventListener('ended', () => {
+      videoOverlay.classList.remove('hide');
+      introVideo.removeAttribute('controls');
+    });
+  }
 });
+
