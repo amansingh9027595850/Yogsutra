@@ -316,26 +316,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Video Section Play/Pause Logic ---
-  const introVideo = document.getElementById('intro-video');
-  const videoOverlay = document.getElementById('video-overlay');
+  // --- Video Section Play/Pause Logic (supports multiple videos) ---
+  const videoWrappers = document.querySelectorAll('.video-wrapper');
+  videoWrappers.forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const overlay = wrapper.querySelector('.video-overlay');
+    if (video && overlay) {
+      overlay.addEventListener('click', () => {
+        video.play();
+        overlay.classList.add('hide');
+        video.setAttribute('controls', 'true');
+      });
 
-  if (introVideo && videoOverlay) {
-    videoOverlay.addEventListener('click', () => {
-      introVideo.play();
-      videoOverlay.classList.add('hide');
-      introVideo.setAttribute('controls', 'true');
-    });
+      video.addEventListener('pause', () => {
+        overlay.classList.remove('hide');
+        video.removeAttribute('controls');
+      });
 
-    introVideo.addEventListener('pause', () => {
-      videoOverlay.classList.remove('hide');
-      introVideo.removeAttribute('controls');
-    });
-
-    introVideo.addEventListener('ended', () => {
-      videoOverlay.classList.remove('hide');
-      introVideo.removeAttribute('controls');
-    });
-  }
+      video.addEventListener('ended', () => {
+        overlay.classList.remove('hide');
+        video.removeAttribute('controls');
+      });
+    }
+  });
 });
 
