@@ -328,6 +328,16 @@ document.addEventListener('DOMContentLoaded', () => {
         video.setAttribute('controls', 'true');
       });
 
+      // Pause other videos when one starts playing
+      video.addEventListener('play', () => {
+        videoWrappers.forEach(otherWrapper => {
+          const otherVideo = otherWrapper.querySelector('video');
+          if (otherVideo && otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
+      });
+
       video.addEventListener('pause', () => {
         overlay.classList.remove('hide');
         video.removeAttribute('controls');
