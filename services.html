@@ -48,21 +48,18 @@
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--spacing-md);">
         
-        <!-- Service 1: Accupressure -->
-        <div class="glass-card" style="padding: 2rem;">
-          <span style="font-size: 2.5rem;">💆‍♂️</span>
-          <h3 style="margin-top: 1rem;">Accupressure</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A traditional therapy where gentle pressure is applied to specific points on your body. It helps improve blood flow, relieves muscle stiffness, boosts energy, and helps your body heal naturally.</p>
-          <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
-            <span>Intensity: <strong>Low</strong></span>
-            <span>Duration: <strong>60 / 90 Mins</strong></span>
-          </div>
-        </div>
-
-        <!-- Service 2: Hatha Yoga -->
+        <!-- Service 1: Hatha Yoga -->
         <div class="glass-card" style="padding: 2rem; position: relative;">
           <div style="position: absolute; top: 20px; right: 20px; background: var(--clr-secondary); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 500; color: var(--clr-primary);">Popular</div>
-          <span style="font-size: 2.5rem;">🌸</span>
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C12 2 9 8 12 22C15 8 12 2 12 2Z" />
+              <path d="M12 8C9.5 8 7 11 7 15.5C7 19.5 10 21 12 22C10 21 7 19.5 7 15.5C7 11 9.5 8 12 8Z" />
+              <path d="M12 8C14.5 8 17 11 17 15.5C17 19.5 14 21 12 22C14 21 17 19.5 17 15.5C17 11 14.5 8 12 8Z" />
+              <path d="M12 13C8.5 13 4 15 4 18.5C4 21 8 22 12 22" />
+              <path d="M12 13C15.5 13 20 15 20 18.5C20 21 16 22 12 22" />
+            </svg>
+          </div>
           <h3 style="margin-top: 1rem;">Hatha Yoga</h3>
           <p style="margin-top: 0.5rem; font-size: 0.95rem;">A classic yoga class focused on holding poses, safe posture alignment, and steady breathing. Great for all levels to build strength, flexibility, and overall fitness.</p>
           <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
@@ -71,21 +68,113 @@
           </div>
         </div>
 
-        <!-- Service 3: Meditation Sessions -->
+        <!-- Service 2: Ashtanga Yoga -->
         <div class="glass-card" style="padding: 2rem;">
-          <span style="font-size: 2.5rem;">🧘‍♀️</span>
-          <h3 style="margin-top: 1rem;">Meditation Sessions</h3>
-          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A guided session using simple breathing and focusing techniques to quiet a busy mind. Perfect for reducing stress, easing anxiety, and finding inner peace.</p>
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2V4M12 20V22M4 12H2M22 12H20M5.64 5.64L7.05 7.05M16.95 16.95L18.36 18.36M5.64 18.36L7.05 16.95M16.95 7.05L18.36 5.64" />
+              <path d="M8 12C8 9.79 9.79 8 12 8M16 12C16 14.21 14.21 16 12 16" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Ashtanga Yoga</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A dynamic, structured style of yoga that follows a specific sequence of poses. It builds physical strength, stamina, and cardiovascular endurance through breath-synchronized movement.</p>
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span>Intensity: <strong>High</strong></span>
+            <span>Duration: <strong>60 / 75 Mins</strong></span>
+          </div>
+        </div>
+
+        <!-- Service 3: Therapeutic Yoga -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+              <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+              <path d="M12 15v5M9 18h6" />
+              <path d="M3 12h3M18 12h3M6 7A8.5 8.5 0 0 1 18 7" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Therapeutic Yoga</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A gentle, healing practice tailored to individuals recovering from injuries, managing chronic pain, or seeking structural alignment. Focuses on safe modifications and restorative poses.</p>
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span>Intensity: <strong>Low</strong></span>
+            <span>Duration: <strong>60 Mins</strong></span>
+          </div>
+        </div>
+
+        <!-- Service 4: Pranayama & Meditation -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="2" />
+              <path d="M12 7c-2 0-3.5 1-4 3c-.5 2 .5 5 1.5 6.5L7 18.5c-.5.5-.5 1.5 0 2s1.5.5 2 0l2.5-2.5h1l2.5 2.5c.5.5 1.5.5 2 0s.5-1.5 0-2l-2.5-2c1-1.5 2-4.5 1.5-6.5c-.5-2-2-3-4-3Z" />
+              <path d="M9 11a3.5 3.5 0 0 1 6 0" />
+              <path d="M7 9a6.5 6.5 0 0 1 10 0" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Pranayama & Meditation</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A peaceful session focused on ancient yogic breathing techniques (Pranayama) and guided meditation to calm the nervous system, reduce stress, and improve mental clarity.</p>
           <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
             <span>Intensity: <strong>Low</strong></span>
             <span>Duration: <strong>45 / 60 Mins</strong></span>
           </div>
         </div>
 
-        <!-- Service 4: Panchkarma -->
+        <!-- Service 5: Acupressure -->
         <div class="glass-card" style="padding: 2rem;">
-          <span style="font-size: 2.5rem;">🌿</span>
-          <h3 style="margin-top: 1rem;">Panchkarma</h3>
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5" />
+              <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6" />
+              <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v7.5" />
+              <path d="M6 13v-3a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8c0 5 4 8 8 8h3a7 7 0 0 0 7-7v-3a2 2 0 0 0-2-2h-2" />
+              <circle cx="11" cy="15" r="1.5" fill="currentColor" />
+              <circle cx="11" cy="15" r="3.5" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Acupressure</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A traditional therapy where gentle pressure is applied to specific points on your body. It helps improve blood flow, relieves muscle stiffness, boosts energy, and helps your body heal naturally.</p>
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span>Intensity: <strong>Low</strong></span>
+            <span>Duration: <strong>60 / 90 Mins</strong></span>
+          </div>
+        </div>
+
+        <!-- Service 6: Sound Healing -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 10c0 0 0 6 8 6s8-6 8-6C20 15 17 20 12 20S4 15 4 10Z" />
+              <ellipse cx="12" cy="10" rx="8" ry="2" />
+              <path d="M12 6c-2 0-4-.5-4-1s2-1 4-1 4 .5 4 1-2 1-4 1Z" opacity="0.6" />
+              <path d="M12 4c-3.5 0-7-.8-7-1.5S8.5 1 12 1s7 .8 7 1.5-3.5 1.5-7 1.5Z" opacity="0.3" />
+              <path d="M19 8l3 5" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Sound Healing</h3>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem;">A meditative experience where participants are bathed in sound waves produced by instruments like Tibetan singing bowls and gongs to promote deep relaxation and stress relief.</p>
+          <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <span>Intensity: <strong>Low</strong></span>
+            <span>Duration: <strong>60 Mins</strong></span>
+          </div>
+        </div>
+
+        <!-- Service 7: Panchakarma -->
+        <div class="glass-card" style="padding: 2rem;">
+          <div class="service-icon-wrapper" style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--clr-secondary), rgba(255,255,255,0.8)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--clr-primary); box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" opacity="0.1" />
+              <path d="M12 20s8-3 8-10c0-4.5-3.5-7-8-7s-8 2.5-8 7c0 7 8 10 8 10Z" />
+              <path d="M12 6v14" />
+              <path d="M12 10c2.5-1.5 4.5-.5 4.5-.5" />
+              <path d="M12 14c-2.5-1.5-4.5-.5-4.5-.5" />
+              <path d="M12 12.5c2-1 3.5 0 3.5 0" />
+              <path d="M12 16c-2-1-3.5 0-3.5 0" />
+              <path d="M12 2v3M12 3.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+            </svg>
+          </div>
+          <h3 style="margin-top: 1rem;">Panchakarma</h3>
           <p style="margin-top: 0.5rem; font-size: 0.95rem;">A traditional Ayurvedic system of relaxing oil massages and cleansing therapies. It is custom-designed to remove body toxins, relieve stress, and restore your natural energy.</p>
           <div style="margin-top: 1.5rem; border-top: 1px solid var(--clr-secondary); padding-top: var(--spacing-sm); display: flex; justify-content: space-between; font-size: 0.85rem;">
             <span>Intensity: <strong>Low / Medium</strong></span>
@@ -124,10 +213,13 @@
       <div class="footer-col">
         <h4>Offerings</h4>
         <ul class="footer-links">
-          <li><a href="services.html" class="footer-link">Accupressure</a></li>
           <li><a href="services.html" class="footer-link">Hatha Yoga</a></li>
-          <li><a href="services.html" class="footer-link">Meditation Sessions</a></li>
-          <li><a href="services.html" class="footer-link">Panchkarma</a></li>
+          <li><a href="services.html" class="footer-link">Ashtanga Yoga</a></li>
+          <li><a href="services.html" class="footer-link">Therapeutic Yoga</a></li>
+          <li><a href="services.html" class="footer-link">Pranayama & Meditation</a></li>
+          <li><a href="services.html" class="footer-link">Acupressure</a></li>
+          <li><a href="services.html" class="footer-link">Sound Healing</a></li>
+          <li><a href="services.html" class="footer-link">Panchakarma</a></li>
         </ul>
       </div>
       <div class="footer-col">
